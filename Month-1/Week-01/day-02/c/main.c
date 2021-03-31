@@ -3,8 +3,7 @@
 #include <string.h>
 #include "main.h"
 #define NEMO "Nemo"
-char *output = malloc(sizeof(char) * 1024);
-strcat(output,"Can't Find Nemo!");
+char *output = "Can't Find Nemo!";
 char *findNemo(char str[100]){
 	char split[100][100];
 	int i = 0;
