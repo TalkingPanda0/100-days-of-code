@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "main.h"
-char output[100] = "Can't Find Nemo!";
 #define NEMO "Nemo"
+char *output = malloc(sizeof(char) * 1024);
+strcat(output,"Can't Find Nemo!");
 char *findNemo(char str[100]){
 	char split[100][100];
 	int i = 0;
@@ -26,8 +28,15 @@ char *findNemo(char str[100]){
 for(i=0;i<=size;i++)
 	{
 		if(!strcmp(split[i],NEMO)){
-			sprintf(output,"Found Nemo At %d!",i);
+			snprintf(output,1024,"Found Nemo At %d!",i);
 		}
 	}
 	return output;
 }
+
+
+
+
+
+
+
